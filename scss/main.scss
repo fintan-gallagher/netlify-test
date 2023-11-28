@@ -1,0 +1,49 @@
+//Import functions
+@import "../node_modules/bootstrap/scss/functions";
+
+$enable-rounded: false;
+$enable-shadows: true;
+
+//Theme Colours
+$primary: #81c1d1;
+$secondary: rgb(164, 164, 164);
+$light: rgb(239, 237, 237);
+$dark: rgb(24, 24, 24);
+$warning: rgb(247, 225, 161);
+$danger: rgb(255, 170, 170);
+
+//Fonts
+$font-family-sans-serif: "Inter", sans-serif;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .1,
+  2: $spacer * .33,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+) !default;
+
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+//Custom Colours
+$custom-colors: (
+    "primary-light": rgb(237, 222, 249),
+    "secondary-light": rgb(246, 246, 246),
+);
+
+//Merge colours with the theme
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+//Import bootstrap.scss
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
